@@ -1,11 +1,9 @@
 """
-This module provides functionality to interact with system processes using the subprocess module.
+This module provides functionality to generate and print a random array.
 """
-import subprocess # Fixed: missing-module-docstring
+import random
 
 def random_array(arr):
-    # Fixed: missing-module-docstring
-    # Fixed: missing-function-docstring
     """
     Generates a random array from the given list of elements.
 
@@ -15,12 +13,6 @@ def random_array(arr):
     Returns:
         list: A new list containing the elements of arr in random order.
     """
-    shuffled_num = None
-    for i, _ in enumerate(arr): # Fixed: consider-using-enumerate
-        shuffled_num = subprocess.run(["/usr/bin/shuf", "-i1-20", "-n1"], # full path to executable
-                                      capture_output=True,
-                                      shell=False, # fixed: CWE-78
-                                      check=True) # Fixed: subprocess-run-check
-        arr[i] = int(shuffled_num.stdout)
+    for i,_ in enumerate(arr):
+        arr[i] = random.randint(1, 20)
     return arr
-# fixed: Trailing newlines (trailing-newlines)
