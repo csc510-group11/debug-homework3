@@ -58,7 +58,7 @@ def recombine_mrahma22(left_arr, right_arr):
 
     return merge_arr
 
-def custom_algo_mrahma22_with_fault(n):
+def custom_algo_mrahma22(n):
     """
     A custom algorithm that generates n fibonacci numbers.
     
@@ -79,9 +79,9 @@ def custom_algo_mrahma22_with_fault(n):
         fib.append(fib[i-1] + fib[i-2])
     return fib
 
-arr_in = rand.random_array([None] * 20)
+arr_in = rand.random_array_mrahma22([None] * 20)
 arr_out = merge_sort_mrahma22(arr_in)
 
 print(arr_out)
 
-print(custom_algo_mrahma22_with_fault(secrets.randbelow(10)))
+print(custom_algo_mrahma22(secrets.randbelow(10)))

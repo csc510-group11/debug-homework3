@@ -7,7 +7,7 @@ Functions:
 """
 import secrets
 
-def random_array(arr):
+def random_array_mrahma22(arr):
     """
     Replaces each element in the input array with a random integer between 1 and 20.
 
