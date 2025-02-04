@@ -3,7 +3,7 @@ This module provides functionality to generate and print a random array.
 """
 import secrets
 
-def random_array(arr):
+def random_array_nafreen(arr):
     """
     Generates a random array from the given list of elements.
 

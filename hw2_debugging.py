@@ -3,7 +3,7 @@ This module provides functionality to generate a random array.
 """
 import rand # fixed: missing-module-docstring
 
-def merge_sort(arr): # fixed: Function name to snake_case naming style
+def merge_sort_nafreen(arr): # fixed: Function name to snake_case naming style
     # fixed: missing-module-docstring
     # fixed: missing-function-docstring
     """
@@ -20,9 +20,9 @@ def merge_sort(arr): # fixed: Function name to snake_case naming style
 
     half = len(arr)//2
 
-    return recombine(merge_sort(arr[:half]), merge_sort(arr[half:]))
+    return recombine_nafreen(merge_sort_nafreen(arr[:half]), merge_sort_nafreen(arr[half:]))
 
-def recombine(left_arr, right_arr): # fixed: Var name to snake_case style
+def recombine_nafreen(left_arr, right_arr): # fixed: Var name to snake_case style
     # fixed: missing-module-docstring
     # fixed: missing-function-docstring
     """
@@ -60,9 +60,9 @@ def recombine(left_arr, right_arr): # fixed: Var name to snake_case style
 
     return merge_arr
 
-array = rand.random_array([None] * 20) # fixed: Redefining name from outer scope
+array = rand.random_array_nafreen([None] * 20) # fixed: Redefining name from outer scope
 # print(array)
-arr_out = merge_sort(array)
+arr_out = merge_sort_nafreen(array)
 print(arr_out) # fixed: Trailing whitespace (trailing-whitespace)
 if arr_out != sorted(array):
     raise AssertionError("The output array is not sorted correctly.") # fixed: CWE-703
