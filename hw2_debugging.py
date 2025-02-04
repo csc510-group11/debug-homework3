@@ -1,11 +1,11 @@
 """
 This module provides functionality to generate a random array.
 """
-import rand # Fixed: missing-module-docstring
+import rand # fixed: missing-module-docstring
 
 def merge_sort(arr): # fixed: Function name to snake_case naming style
-    # Fixed: missing-module-docstring
-    # Fixed: missing-function-docstring
+    # fixed: missing-module-docstring
+    # fixed: missing-function-docstring
     """
     Sorts an array in ascending order using the merge sort algorithm.
 
@@ -23,8 +23,8 @@ def merge_sort(arr): # fixed: Function name to snake_case naming style
     return recombine(merge_sort(arr[:half]), merge_sort(arr[half:]))
 
 def recombine(left_arr, right_arr): # fixed: Var name to snake_case style
-    # Fixed: missing-module-docstring
-    # Fixed: missing-function-docstring
+    # fixed: missing-module-docstring
+    # fixed: missing-function-docstring
     """
     Merges two sorted arrays into one sorted array.
 
@@ -64,5 +64,6 @@ array = rand.random_array([None] * 20) # fixed: Redefining name from outer scope
 # print(array)
 arr_out = merge_sort(array)
 print(arr_out) # fixed: Trailing whitespace (trailing-whitespace)
-assert arr_out == sorted(array)
+if arr_out != sorted(array):
+    raise AssertionError("The output array is not sorted correctly.") # fixed: CWE-703
 # fixed: Trailing newlines (trailing-newlines)
