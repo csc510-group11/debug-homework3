@@ -3,7 +3,10 @@ This module provides functionality for merge sort.
 '''
 import sys
 import os
+
+# Ensure the parent directory is in the Python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from hw2_debugging import merge_sort # fixed: wildcard-import
 
 # Write 3 test cases for merge sort
