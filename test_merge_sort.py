@@ -1,7 +1,13 @@
-from hw2_debugging import *
+'''
+This module provides functionality for merge sort.
+'''
+from hw2_debugging import merge_sort # fixed: wildcard-import
 
 # Write 3 test cases for merge sort
 def test_merge_sort():
+    '''
+    Test cases for merge_sort function
+    '''
     # Test case 1: Empty list
     assert merge_sort([]) == []
     # Test case 2: List with one element
