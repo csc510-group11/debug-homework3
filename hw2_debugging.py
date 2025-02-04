@@ -15,7 +15,7 @@ def merge_sort(arr): # fixed: Function name to snake_case naming style
     Returns:
         list: A new list containing the sorted elements.
     """
-    if len(arr) == 1: # fixed: Unnecessary parens after 'if' keyword (superfluous-parens)
+    if len(arr) <= 1: # fixed: Unnecessary parens after 'if' keyword (superfluous-parens)
         return arr
 
     half = len(arr)//2
