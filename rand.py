@@ -16,7 +16,7 @@ def random_array(arr):
         list: A new list containing the elements of arr in random order.
     """
     shuffled_num = None
-    for i in arr: # Fixed: consider-using-enumerate
+    for i, e in enumerate(arr): # Fixed: consider-using-enumerate
         shuffled_num = subprocess.run(["shuf", "-i1-20", "-n1"],
                                       capture_output=True,
                                       check=True) # Fixed: subprocess-run-check
