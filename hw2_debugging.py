@@ -60,6 +60,13 @@ def recombine_nafreen(left_arr, right_arr): # fixed: Var name to snake_case styl
 
     return merge_arr
 
+# missing-function-docstring
+def isPrime_nafreen(n): # snake case naming convention
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True # trailing-whitespace
+
 array = rand.random_array_nafreen([None] * 20) # fixed: Redefining name from outer scope
 # print(array)
 arr_out = merge_sort_nafreen(array)
@@ -67,3 +74,12 @@ print(arr_out) # fixed: Trailing whitespace (trailing-whitespace)
 if arr_out != sorted(array):
     raise AssertionError("The output array is not sorted correctly.") # fixed: CWE-703
 # fixed: Trailing newlines (trailing-newlines)
+
+print(isPrime_nafreen(17))  # Expected: True
+print(isPrime_nafreen(8))  # Expected: False
+# If a float is passed, our function will break.
+print(isPrime_nafreen(17.89))
+#If a number less than 2 is passed, our function will return wrong output.
+print(isPrime_nafreen(-1))
+#If other datatype is passed, our function will break.
+print(isPrime_nafreen("ginger"))
