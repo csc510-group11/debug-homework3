@@ -17,4 +17,3 @@ def test_merge_sort():
     # Test case 3: List with multiple elements
     if merge_sort([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]) != [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]:
         raise AssertionError("The output array is not sorted correctly.") # fixed: CWE-703
-
