@@ -60,12 +60,28 @@ def recombine_nafreen(left_arr, right_arr): # fixed: Var name to snake_case styl
 
     return merge_arr
 
-# missing-function-docstring
-def isPrime_nafreen(n): # snake case naming convention
-    for i in range(2, n):
+# fixed: missing-function-docstring
+def is_prime_function(n): # fixed: snake case naming convention
+    """
+    Checks if a number is prime.
+
+    Args:
+        n (int): The number to be checked.
+
+    Returns:
+        bool: True if n is prime, False otherwise.
+    """
+    if isinstance(n, float): # handled float values
+        n = int(n)
+    if isinstance(n, str): # handled string values
+        print( "Input must be an integer.", end = " " )
+        return False
+    if n < 2: # handled values less than 2
+        return False
+    for i in range(2, int(n**0.5) + 1): # introduced optimization
         if n % i == 0:
             return False
-    return True # trailing-whitespace
+    return True # fixed: trailing-whitespace
 
 array = rand.random_array_nafreen([None] * 20) # fixed: Redefining name from outer scope
 # print(array)
@@ -75,11 +91,11 @@ if arr_out != sorted(array):
     raise AssertionError("The output array is not sorted correctly.") # fixed: CWE-703
 # fixed: Trailing newlines (trailing-newlines)
 
-print(isPrime_nafreen(17))  # Expected: True
-print(isPrime_nafreen(8))  # Expected: False
-# If a float is passed, our function will break.
-print(isPrime_nafreen(17.89))
-#If a number less than 2 is passed, our function will return wrong output.
-print(isPrime_nafreen(-1))
-#If other datatype is passed, our function will break.
-print(isPrime_nafreen("ginger"))
+print(is_prime_function(17))  # Expected: True
+print(is_prime_function(8))  # Expected: False
+# fixed: If a float is passed, our function will break.
+print(is_prime_function(17.89)) # Expected: True
+# fixed: If a number less than 2 is passed, our function will return wrong output.
+print(is_prime_function(-1)) # Expected: False
+# fixed: If other datatype is passed, our function will break.
+print(is_prime_function("ginger")) # Expected: False
