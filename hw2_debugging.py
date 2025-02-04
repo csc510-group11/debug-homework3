@@ -38,21 +38,31 @@ def recombine(left_arr, right_arr): # fixed: Var name to snake_case style
     left_index = 0 # fixed: Var name to snake_case style
     right_index = 0 # fixed: Var name to snake_case style
     merge_arr = [None] * (len(left_arr) + len(right_arr)) # fixed: Var name to snake_case style
+    # print(f"left arr: {left_arr}, right arr: {right_arr}")
+    arr_index = 0 # new variable index for merge_arr
     while left_index < len(left_arr) and right_index < len(right_arr):
         if left_arr[left_index] < right_arr[right_index]:
-            right_index += 1
-            merge_arr[left_index + right_index] = left_arr[left_index]
-        else:
+            merge_arr[arr_index] = left_arr[left_index]
             left_index += 1
-            merge_arr[left_index + right_index] = right_arr[right_index]
+        else:
+            merge_arr[arr_index] = right_arr[right_index]
+            right_index += 1
+        arr_index += 1
+        # print(f"left_index: {left_index}, right_index: {right_index}, merge_arr: {merge_arr}")
     for i in range(right_index, len(right_arr)): # fixed: Trailing whitespace (trailing-whitespace)
-        merge_arr[left_index + right_index] = right_arr[i]
+        merge_arr[arr_index] = right_arr[i]
+        arr_index += 1
     for i in range(left_index, len(left_arr)): # fixed: Trailing whitespace (trailing-whitespace)
-        merge_arr[left_index + right_index] = left_arr[i]
+        merge_arr[arr_index] = left_arr[i]
+        arr_index += 1
+    # print("after merge_arr loop", merge_arr)
+    # print('----------------------------------------------------------------')
 
     return merge_arr
 
 array = rand.random_array([None] * 20) # fixed: Redefining name from outer scope
+# print(array)
 arr_out = merge_sort(array)
 print(arr_out) # fixed: Trailing whitespace (trailing-whitespace)
+assert arr_out == sorted(array)
 # fixed: Trailing newlines (trailing-newlines)
