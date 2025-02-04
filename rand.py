@@ -1,7 +1,7 @@
 """
 This module provides functionality to generate and print a random array.
 """
-import random
+import secrets
 
 def random_array(arr):
     """
@@ -14,5 +14,5 @@ def random_array(arr):
         list: A new list containing the elements of arr in random order.
     """
     for i,_ in enumerate(arr):
-        arr[i] = random.randint(1, 20)
+        arr[i] = secrets.randbelow(20) + 1  # Generate a random number between 1 and 20
     return arr
