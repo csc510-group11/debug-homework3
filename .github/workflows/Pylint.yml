@@ -1,4 +1,4 @@
-name: CI/CD
+name: Pylint Checking
 
 on: [push, pull_request]
 
