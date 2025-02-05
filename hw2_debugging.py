@@ -158,6 +158,35 @@ def custom_algo_mrahma22(n):
         fib.append(fib[i-1] + fib[i-2])
     return fib
 
+
+def mergeSort_sdatta4(arr):
+    if (len(arr) == 1):
+        return arr
+
+    half = len(arr)//2
+
+    return recombine_sdatta4(mergeSort_sdatta4(arr[:half]), mergeSort_sdatta4(arr[half:]))
+
+def recombine_sdatta4(leftArr, rightArr):
+    leftIndex = 0
+    rightIndex = 0
+    mergeArr = [None] * (len(leftArr) + len(rightArr))
+    while leftIndex < len(leftArr) and rightIndex < len(rightArr):
+        if leftArr[leftIndex] < rightArr[rightIndex]:
+            rightIndex += 1
+            mergeArr[leftIndex + rightIndex] = leftArr[leftIndex]
+        else:
+            leftIndex += 1
+            mergeArr[leftIndex + rightIndex] = rightArr[rightIndex]
+
+    for i in range(rightIndex, len(rightArr)):
+        mergeArr[leftIndex + rightIndex] = rightArr[i]
+    
+    for i in range(leftIndex, len(leftArr)):
+        mergeArr[leftIndex + rightIndex] = leftArr[i]
+
+    return mergeArr
+
 array = rand.random_array_nafreen([None] * 20) # fixed: Redefining name from outer scope
 # print(array)
 arr_out = merge_sort_nafreen(array)
@@ -181,3 +210,9 @@ arr_out = merge_sort_mrahma22(arr_in)
 print(arr_out)
 
 print(custom_algo_mrahma22(secrets.randbelow(10)))
+
+arr = rand.random_array_sdatta4([None] * 20)
+arr_out = mergeSort_sdatta4(arr)
+
+print(arr_out)
+

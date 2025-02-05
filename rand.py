@@ -2,6 +2,7 @@
 This module provides functionality to generate and print a random array.
 """
 import secrets
+import subprocess
 
 def random_array_nafreen(arr):
     """
@@ -29,4 +30,11 @@ def random_array_mrahma22(arr):
     """
     for i, _ in enumerate(arr):
         arr[i] = secrets.randbelow(20) + 1
+    return arr
+
+def random_array_sdatta4(arr):
+    shuffled_num = None
+    for i in range(len(arr)):
+        shuffled_num = subprocess.run(["shuf", "-i1-20", "-n1"], capture_output=True)
+        arr[i] = int(shuffled_num.stdout)
     return arr
