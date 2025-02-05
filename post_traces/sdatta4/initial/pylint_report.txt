@@ -1,0 +1,28 @@
+************* Module hw2_debugging
+hw2_debugging.py:162:0: C0325: Unnecessary parens after 'if' keyword (superfluous-parens)
+hw2_debugging.py:172:0: C0303: Trailing whitespace (trailing-whitespace)
+hw2_debugging.py:184:0: C0303: Trailing whitespace (trailing-whitespace)
+hw2_debugging.py:214:0: C0303: Trailing whitespace (trailing-whitespace)
+hw2_debugging.py:250:0: C0305: Trailing newlines (trailing-newlines)
+hw2_debugging.py:7:23: W0621: Redefining name 'arr' from outer scope (line 246) (redefined-outer-name)
+hw2_debugging.py:87:24: W0621: Redefining name 'arr' from outer scope (line 246) (redefined-outer-name)
+hw2_debugging.py:161:0: C0116: Missing function or method docstring (missing-function-docstring)
+hw2_debugging.py:161:0: C0103: Function name "mergeSort_sdatta4" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:161:22: W0621: Redefining name 'arr' from outer scope (line 246) (redefined-outer-name)
+hw2_debugging.py:169:0: C0116: Missing function or method docstring (missing-function-docstring)
+hw2_debugging.py:169:22: C0103: Argument name "leftArr" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:169:31: C0103: Argument name "rightArr" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:170:4: C0103: Variable name "leftIndex" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:171:4: C0103: Variable name "rightIndex" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:173:4: C0103: Variable name "mergeArr" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:176:12: C0103: Variable name "rightIndex" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:179:12: C0103: Variable name "leftIndex" doesn't conform to snake_case naming style (invalid-name)
+************* Module rand
+rand.py:40:0: C0304: Final newline missing (missing-final-newline)
+rand.py:35:0: C0116: Missing function or method docstring (missing-function-docstring)
+rand.py:37:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+rand.py:38:23: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
+
+-----------------------------------
+Your code has been rated at 8.28/10
+
