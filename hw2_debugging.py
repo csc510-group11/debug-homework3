@@ -169,14 +169,13 @@ def custom_algo_mrahma22(n):
         fib.append(fib[i - 1] + fib[i - 2])
     return fib
 
-
 def merge_sort_sdatta4(arr):
     """
     Sort a array using the merge sort algorithm 
     """
     if not arr:
         return []
-    
+
     if len(arr) == 1:
         return arr
 
