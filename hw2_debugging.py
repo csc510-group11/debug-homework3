@@ -174,6 +174,9 @@ def merge_sort_sdatta4(arr):
     """
     Sort a array using the merge sort algorithm 
     """
+    if not arr:
+        return []
+    
     if len(arr) == 1:
         return arr
 

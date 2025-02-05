@@ -41,7 +41,7 @@ def random_array_sdatta4(arr):
     Creates fills a array with randomly shuffled numbers from 1-20
     """
     shuffled_num = None
-    for i in enumerate(arr):
+    for i, _ in enumerate(arr):
         shuffled_num = subprocess.run(
             ["/usr/bin/shuf", "-i1-20", "-n1"], capture_output=True, check=True) #nosec B603
         arr[i] = int(shuffled_num.stdout)
