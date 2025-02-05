@@ -6,3 +6,4 @@
 ![Pytest Checking](https://github.com/csc510-group11/debug-homework3/actions/workflows/.github/workflows/pytest.yml/badge.svg)
 ![Pylint Checking](https://github.com/csc510-group11/debug-homework3/actions/workflows/.github/workflows/Pylint.yml/badge.svg)
 ![Pyflakes](https://github.com/csc510-group11/debug-homework3/actions/workflows/.github/workflows/pyflakes.yml/badge.svg)
+[![Bandit](https://github.com/csc510-group11/debug-homework3/actions/workflows/bandit.yml/badge.svg)](https://github.com/csc510-group11/debug-homework3/actions/workflows/bandit.yml)
